@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>BDS (Batavia Delight Signature) — High Atelier & Modest Luxury</title>
+  <meta name="description" content="Koleksi busana muslimah, hijab premium, dan wewangian mewah dari BDS Atelier. Where Finest Quality Meets Effortless Style.">
+  
+  <!-- Favicon / Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            alabaster: '#F9F6F0',
+            'off-white': '#FDFBF7',
+            espresso: '#231F20',
+            charcoal: '#2C2A29',
+            champagne: '#C5A880',
+            'champagne-light': '#E9DCBC',
+            'champagne-dark': '#A38459',
+            terracotta: '#A8654C',
+            'surface-low': '#F4F1EA',
+            'surface-card': '#FFFFFF',
+            'border-subtle': '#E8E4DC',
+            'border-dark': '#2C2A29'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Cormorant Garamond', 'serif'],
+            editorial: ['"Cormorant Garamond"', 'Playfair Display', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          letterSpacing: {
+            'ultra-wide': '0.28em',
+            'mega-wide': '0.35em'
+          },
+          animation: {
+            'marquee': 'marquee 32s linear infinite',
+            'pulse-subtle': 'pulseSubtle 2.5s ease-in-out infinite',
+            'fade-in': 'fadeIn 0.3s ease-out forwards',
+            'slide-up': 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards'
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' }
+            },
+            pulseSubtle: {
+              '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+              '50%': { transform: 'scale(1.08)', opacity: '0.85' }
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(16px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          }
+        }
+      }
+    };
+  </script>
+  
+  <style>
+    /* Custom Scrollbar & Aesthetics */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #F9F6F0; }
+    ::-webkit-scrollbar-thumb { background: #C5A880; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #A38459; }
+    
+    .aspect-3-4 { aspect-ratio: 3 / 4; }
+    .backdrop-glass {
+      background: rgba(249, 246, 240, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .badge-blur {
+      background: rgba(253, 251, 247, 0.9);
+      backdrop-filter: blur(8px);
+    }
+    /* Hotspot animation */
+    .hotspot-dot::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 9999px;
+      background: rgba(197, 168, 128, 0.45);
+      animation: pulseHotspot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulseHotspot {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.6); opacity: 0; }
+    }
+  </style>
+</head>
+<body class="bg-alabaster font-sans text-espresso antialiased selection:bg-espresso selection:text-alabaster overflow-x-hidden">
+
+  <!-- ==================== FLOATING CONCIERGE & CART DOCK ==================== -->
+  <div class="fixed bottom-6 right-5 sm:right-8 z-40 flex flex-col items-end gap-3 pointer-events-none">
+    <!-- Floating WhatsApp Concierge -->
+    <a href="https://wa.me/6281234567890?text=Halo%20Admin%20BDS%2C%20saya%20tertarik%20dengan%20koleksi%20terbaru%20BDS" target="_blank" rel="noopener noreferrer" class="pointer-events-auto flex items-center gap-2 px-3.5 py-2.5 bg-[#25D366] text-white rounded-full shadow-2xl hover:bg-[#1EBE5D] hover:scale-105 transition-all text-xs font-semibold tracking-wider uppercase group" title="Chat WhatsApp Admin">
+      <span class="material-symbols-outlined text-lg">chat</span>
+      <span class="hidden sm:inline">WhatsApp Concierge</span>
+    </a>
+
+    <!-- Floating Shopping Bag Button -->
+    <button id="open-cart-btn" aria-label="Buka Tas Belanja" class="pointer-events-auto relative flex items-center gap-2.5 px-4 py-3 bg-espresso text-white rounded-full shadow-2xl hover:bg-champagne hover:scale-105 transition-all border border-border-subtle group" title="Buka Tas Belanja">
+      <span class="material-symbols-outlined text-xl">shopping_bag</span>
+      <span class="text-xs uppercase tracking-wider font-semibold">Tas</span>
+      <span id="cart-badge-count" class="w-5 h-5 bg-terracotta text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-sm">0</span>
+    </button>
+  </div>
+
+  <!-- ==================== TOP MARQUEE ANNOUNCEMENT ==================== -->
+  <aside class="w-full bg-espresso text-alabaster border-b border-charcoal/60 overflow-hidden text-xs py-2 tracking-ultra-wide uppercase">
+    <div class="animate-marquee flex items-center gap-10 whitespace-nowrap">
+      <span class="flex items-center gap-10">
+        <span>Koleksi Raya &amp; Eid Series 2025 Tersedia Terbatas</span>
+        <span class="text-champagne font-bold">•</span>
+        <span>Free Shipping Se-Indonesia dengan Kode: <strong class="text-champagne">BDSLUX</strong></span>
+        <span class="text-champagne font-bold">•</span>
+        <span>Where Finest Quality Meets Effortless Style</span>
+        <span class="text-champagne font-bold">•</span>
+        <span>Layanan Konsultasi &amp; Pemesanan Cepat via WhatsApp Admin</span>
+        <span class="text-champagne font-bold">•</span>
+      </span>
+      <span aria-hidden="true" class="flex items-center gap-10">
+        <span>Koleksi Raya &amp; Eid Series 2025 Tersedia Terbatas</span>
+        <span class="text-champagne font-bold">•</span>
+        <span>Free Shipping Se-Indonesia dengan Kode: <strong class="text-champagne">BDSLUX</strong></span>
+        <span class="text-champagne font-bold">•</span>
+        <span>Where Finest Quality Meets Effortless Style</span>
+        <span class="text-champagne font-bold">•</span>
+        <span>Layanan Konsultasi &amp; Pemesanan Cepat via WhatsApp Admin</span>
+        <span class="text-champagne font-bold">•</span>
+      </span>
+    </div>
+  </aside>
+
+  <!-- ==================== STICKY NAVIGATION (LOGO ONLY) ==================== -->
+  <header class="sticky top-0 z-40 w-full backdrop-glass border-b border-border-subtle transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-center">
+      <!-- Centered Official BDS Logo Only -->
+      <a href="#" class="flex items-center justify-center gap-3 group py-2">
+        <img src="../Image/bds-logo-clean.png" alt="BDS Official Logo" class="h-11 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105 duration-300">
+        <div class="flex flex-col text-left">
+          <span class="font-serif tracking-[0.35em] text-xl sm:text-2xl font-medium uppercase leading-tight text-espresso">BDS</span>
+          <span class="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-champagne font-medium">Atelier &amp; Boutique</span>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <!-- ==================== SEARCH BAR MODAL OVERLAY ==================== -->
+  <div id="search-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-start justify-center pt-24 px-4 transition-all">
+    <div class="bg-off-white w-full max-w-2xl p-6 sm:p-8 shadow-2xl border border-border-subtle relative animate-slide-up">
+      <button id="close-search-btn" class="absolute top-5 right-5 text-espresso hover:text-terracotta">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+      <div class="flex items-center gap-3 border-b-2 border-espresso pb-3">
+        <span class="material-symbols-outlined text-2xl text-champagne">search</span>
+        <input id="search-input" type="text" placeholder="Cari nama koleksi, voal, abaya, jihan parfum..." class="w-full bg-transparent text-espresso font-serif text-lg sm:text-xl placeholder:text-gray-400 focus:outline-none">
+      </div>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="text-gray-400 uppercase tracking-wider">Pencarian Populer:</span>
+        <button class="text-espresso hover:text-champagne underline" onclick="quickSearch('Airin')">Airin Raya</button>
+        <button class="text-espresso hover:text-champagne underline" onclick="quickSearch('Naira')">Naira Abaya</button>
+        <button class="text-espresso hover:text-champagne underline" onclick="quickSearch('Jihan')">Jihan Parfum</button>
+        <button class="text-espresso hover:text-champagne underline" onclick="quickSearch('Voal')">Voal Hijab</button>
+        <button class="text-espresso hover:text-champagne underline" onclick="quickSearch('Serum')">Body Serum</button>
+      </div>
+      <div id="search-results" class="mt-6 max-h-72 overflow-y-auto divide-y divide-border-subtle">
+        <!-- Results populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== 1. HERO SECTION (EDITORIAL CAMPAIGN) ==================== -->
+    <section class="relative w-full min-h-[85vh] lg:h-[92vh] overflow-hidden flex items-end">
+      <!-- Background Image with Editorial Vignette & Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img src="../Image/Head.png" alt="BDS Raya Campaign 2025" class="w-full h-full object-cover object-center filter brightness-[0.92]">
+        <div class="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/35 to-espresso/20 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-espresso/80 via-transparent to-transparent"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24 pt-32">
+        <div class="max-w-2xl text-alabaster">
+          
+          <div class="inline-flex items-center gap-3 px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 mb-6">
+            <span class="w-2 h-2 rounded-full bg-champagne animate-pulse"></span>
+            <span class="text-[11px] uppercase tracking-ultra-wide text-champagne-light font-medium">BDS Raya Collection 2025 • High Atelier</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] mb-6 text-white font-normal">
+            Where Finest Quality <br class="hidden sm:inline">
+            <span class="italic font-light text-champagne-light">Meets Effortless Style.</span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-gray-200 leading-relaxed max-w-xl mb-10 font-light">
+            Sentuhan kemewahan busana modest, kenyamanan kain voal ultrafine, serta keharuman personal ikonik untuk merayakan setiap momen penuh pesona.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#katalog" class="px-8 py-4 bg-alabaster text-espresso text-xs uppercase tracking-ultra-wide font-semibold hover:bg-champagne hover:text-white transition-all duration-300 shadow-xl flex items-center gap-3">
+              <span>Jelajahi Koleksi</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+            <a href="#lookbook" class="px-8 py-4 bg-transparent text-white border border-white/40 text-xs uppercase tracking-ultra-wide font-medium hover:bg-white/10 hover:border-white transition-all duration-300 backdrop-blur-sm">
+              Lihat Lookbook
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Right Editorial Badge -->
+      <div class="hidden lg:flex absolute bottom-10 right-10 z-10 items-center gap-6 text-xs text-white/70 tracking-ultra-wide uppercase">
+        <span>Handcrafted Excellence</span>
+        <span class="w-10 h-[1px] bg-champagne"></span>
+        <span>Jakarta &bull; Indonesia</span>
+      </div>
+    </section>
+
+    <!-- ==================== 2. VALUE PROPOSITIONS BAR ==================== -->
+    <section class="w-full bg-surface-low border-b border-border-subtle py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-border-subtle">
+          
+          <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:px-4">
+            <span class="material-symbols-outlined text-3xl text-champagne">verified</span>
+            <div>
+              <h4 class="text-xs uppercase tracking-widest font-semibold text-espresso">100% Original Atelier</h4>
+              <p class="text-xs text-gray-500 mt-0.5">Bahan eksklusif voal 70s &amp; sutra pilihan.</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:px-4">
+            <span class="material-symbols-outlined text-3xl text-champagne">local_shipping</span>
+            <div>
+              <h4 class="text-xs uppercase tracking-widest font-semibold text-espresso">Gratis Ongkir</h4>
+              <p class="text-xs text-gray-500 mt-0.5">Seluruh Indonesia min. belanja Rp 300K.</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:px-4">
+            <span class="material-symbols-outlined text-3xl text-champagne">support_agent</span>
+            <div>
+              <h4 class="text-xs uppercase tracking-widest font-semibold text-espresso">Konsultasi Pribadi</h4>
+              <p class="text-xs text-gray-500 mt-0.5">Admin ramah via WhatsApp siap bantu ukuran.</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:px-4">
+            <span class="material-symbols-outlined text-3xl text-champagne">published_with_changes</span>
+            <div>
+              <h4 class="text-xs uppercase tracking-widest font-semibold text-espresso">Garansi Retur Ukuran</h4>
+              <p class="text-xs text-gray-500 mt-0.5">Tukar ukuran mudah dalam 7 hari.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. BRAND STORY / COMPANY PROFILE (ASYMMETRICAL LAYOUT) ==================== -->
+    <section id="brand-story" class="py-24 lg:py-32 bg-alabaster overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Left Overlapping Images Grid -->
+          <div class="lg:col-span-6 relative">
+            <div class="relative w-4/5 aspect-[3/4] bg-surface-low overflow-hidden shadow-2xl border border-border-subtle">
+              <img src="../Image/Airin.png" alt="Airin Dress Craftsmanship" class="w-full h-full object-cover">
+            </div>
+            <!-- Overlapping smaller detail image -->
+            <div class="absolute -bottom-8 -right-4 sm:-right-8 w-3/5 aspect-square bg-off-white shadow-2xl border-4 border-alabaster overflow-hidden">
+              <img src="../Image/Rose Ombre.png" alt="Fabric & Drape Detail" class="w-full h-full object-cover">
+              <div class="absolute bottom-3 left-3 px-3 py-1 bg-espresso/80 text-white text-[10px] uppercase tracking-widest">
+                Voal Ultrafine 70s
+              </div>
+            </div>
+            <!-- Accent Monogram Box -->
+            <div class="hidden sm:block absolute -top-6 -left-6 bg-champagne text-white p-5 shadow-lg">
+              <span class="font-serif text-2xl">BDS</span>
+              <p class="text-[9px] uppercase tracking-widest mt-1">Heritage 2025</p>
+            </div>
+          </div>
+
+          <!-- Right Narrative Section -->
+          <div class="lg:col-span-6 lg:pl-6">
+            <span class="text-xs uppercase tracking-mega-wide text-champagne-dark font-semibold block mb-3">
+              THE HERITAGE OF BDS
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-espresso font-normal leading-tight mb-6">
+              Keanggunan yang Tenang, Kualitas Tanpa Kompromi.
+            </h2>
+            
+            <p class="text-sm sm:text-base text-gray-700 leading-relaxed mb-6 font-light">
+              BDS (Batavia Delight Signature) lahir dari sebuah dedikasi untuk menghadirkan busana muslimah dan perawatan diri yang memuliakan setiap lekuk kesantunan (*modesty*). Kami percaya bahwa kemewahan sejati terpancar bukan dari keramaian logo, melainkan dari presisi potongan, kemurnian serat kain, dan wewangian yang meninggalkan jejak tak terlupakan.
+            </p>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-champagne text-xl mt-0.5">spa</span>
+                <div>
+                  <h4 class="text-xs uppercase tracking-wider font-semibold text-espresso">Material Premium Berstandar Tinggi</h4>
+                  <p class="text-xs text-gray-600 mt-1">Menggunakan *Voal Ultrafine*, *Silk Crepe*, dan renda Chantilly bertekstur lembut yang adem dan jatuh anggun saat dikenakan.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-champagne text-xl mt-0.5">flare</span>
+                <div>
+                  <h4 class="text-xs uppercase tracking-wider font-semibold text-espresso">Aroma Signature yang Memikat</h4>
+                  <p class="text-xs text-gray-600 mt-1">Setiap botol parfum Jihan diracik dengan minyak esensial konsentrasi tinggi agar wanginya tahan sepanjang hari hingga 12 jam.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-border-subtle flex items-center gap-6">
+              <a href="#katalog" class="inline-flex items-center gap-2 text-xs uppercase tracking-ultra-wide font-semibold text-espresso hover:text-champagne transition-colors group">
+                <span>Eksplorasi Kurasi Kami</span>
+                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+              <span class="text-gray-300">|</span>
+              <a href="https://wa.me/6281234567890?text=Halo%20BDS%2C%20saya%20ingin%20tahu%20lebih%20banyak%20tentang%20brand%20dan%20koleksi%20terbaru" target="_blank" class="text-xs uppercase tracking-wider text-gray-500 hover:text-espresso transition-colors">
+                Tanya Concierge
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 4. INTERACTIVE LOOKBOOK (HOTSPOTS) ==================== -->
+    <section id="lookbook" class="py-20 lg:py-28 bg-off-white border-t border-b border-border-subtle">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs uppercase tracking-mega-wide text-champagne-dark font-semibold block mb-2">INTERACTIVE RAYA LOOKBOOK</span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-espresso font-normal">Sentuh Detail, Rasakan Kemewahan</h2>
+            <p class="text-xs sm:text-sm text-gray-600 mt-2 max-w-xl">
+              Ketuk titik interaktif pada model untuk melihat artikel busana, detail bahan, dan menambahkan langsung ke tas belanja Anda.
+            </p>
+          </div>
+          <div class="mt-4 md:mt-0 flex items-center gap-2 text-xs text-champagne font-medium uppercase tracking-wider">
+            <span class="w-2.5 h-2.5 rounded-full bg-champagne animate-ping"></span>
+            <span>3 Titik Interaktif Tersedia</span>
+          </div>
+        </div>
+
+        <!-- Lookbook Main Frame with Hotspots -->
+        <div class="relative w-full aspect-[16/9] sm:aspect-[21/9] max-h-[640px] bg-espresso overflow-hidden shadow-2xl border border-border-subtle">
+          <img src="../Image/Head.png" alt="BDS Raya Lookbook Editorial" class="w-full h-full object-cover object-top filter brightness-[0.88]">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+
+          <!-- Hotspot 1: Hijab -->
+          <div class="absolute top-[28%] left-[45%] z-20 group">
+            <button class="relative w-7 h-7 rounded-full bg-champagne text-white flex items-center justify-center shadow-lg hotspot-dot transition-transform hover:scale-125 focus:outline-none" aria-label="Lihat Hijab" onclick="openHotspot('hotspot-1')">
+              <span class="material-symbols-outlined text-sm">add</span>
+            </button>
+            <!-- Glassmorphic Tooltip Card -->
+            <div id="hotspot-1" class="absolute bottom-9 left-1/2 -translate-x-1/2 w-60 sm:w-64 bg-white/95 backdrop-blur-md p-4 shadow-2xl border border-champagne/40 rounded-sm hidden group-hover:block transition-all">
+              <span class="text-[9px] uppercase tracking-widest text-champagne-dark font-bold block mb-1">VOAL ESSENTIAL</span>
+              <h4 class="font-serif text-sm font-semibold text-espresso">BDS Signature Voile Hijab</h4>
+              <p class="text-xs text-gray-600 mb-2">Bahan Ultrafine 70s lembut mudah dibentuk.</p>
+              <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+                <span class="text-xs font-bold text-espresso">Rp 149.000</span>
+                <button onclick="quickAddToCart(4)" class="px-2.5 py-1 bg-espresso text-white text-[10px] uppercase tracking-wider hover:bg-champagne transition-colors">
+                  + Tas
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hotspot 2: Dress / Abaya -->
+          <div class="absolute top-[56%] left-[42%] z-20 group">
+            <button class="relative w-7 h-7 rounded-full bg-champagne text-white flex items-center justify-center shadow-lg hotspot-dot transition-transform hover:scale-125 focus:outline-none" aria-label="Lihat Abaya" onclick="openHotspot('hotspot-2')">
+              <span class="material-symbols-outlined text-sm">add</span>
+            </button>
+            <!-- Tooltip Card -->
+            <div id="hotspot-2" class="absolute bottom-9 left-1/2 -translate-x-1/2 w-60 sm:w-64 bg-white/95 backdrop-blur-md p-4 shadow-2xl border border-champagne/40 rounded-sm hidden group-hover:block transition-all">
+              <span class="text-[9px] uppercase tracking-widest text-terracotta font-bold block mb-1">RAYA EID SERIES</span>
+              <h4 class="font-serif text-sm font-semibold text-espresso">Airin Silk Modest Dress</h4>
+              <p class="text-xs text-gray-600 mb-2">Potongan A-Line elegan dengan aksen renda bordir.</p>
+              <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+                <span class="text-xs font-bold text-espresso">Rp 789.000</span>
+                <button onclick="quickAddToCart(1)" class="px-2.5 py-1 bg-espresso text-white text-[10px] uppercase tracking-wider hover:bg-champagne transition-colors">
+                  + Tas
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hotspot 3: Fragrance -->
+          <div class="absolute top-[68%] left-[58%] z-20 group">
+            <button class="relative w-7 h-7 rounded-full bg-champagne text-white flex items-center justify-center shadow-lg hotspot-dot transition-transform hover:scale-125 focus:outline-none" aria-label="Lihat Parfum" onclick="openHotspot('hotspot-3')">
+              <span class="material-symbols-outlined text-sm">add</span>
+            </button>
+            <!-- Tooltip Card -->
+            <div id="hotspot-3" class="absolute bottom-9 left-1/2 -translate-x-1/2 w-60 sm:w-64 bg-white/95 backdrop-blur-md p-4 shadow-2xl border border-champagne/40 rounded-sm hidden group-hover:block transition-all">
+              <span class="text-[9px] uppercase tracking-widest text-champagne-dark font-bold block mb-1">SIGNATURE SCENT</span>
+              <h4 class="font-serif text-sm font-semibold text-espresso">Jihan Eau De Parfume 30ml</h4>
+              <p class="text-xs text-gray-600 mb-2">Aroma mewah bergamot, peony, &amp; amber.</p>
+              <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+                <span class="text-xs font-bold text-espresso">Rp 219.000</span>
+                <button onclick="quickAddToCart(5)" class="px-2.5 py-1 bg-espresso text-white text-[10px] uppercase tracking-wider hover:bg-champagne transition-colors">
+                  + Tas
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Editorial Banner Overlay Text -->
+          <div class="absolute bottom-6 left-6 z-10 hidden sm:block text-alabaster">
+            <span class="text-[10px] uppercase tracking-widest text-champagne">LOOK 01 • RAYA CAMPAIGN</span>
+            <p class="font-serif text-lg italic font-light">"An ensemble conceived for sacred festivities and quiet luxury."</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 5. KATALOG PRODUK & FILTER CEPAT ==================== -->
+    <section id="katalog" class="py-20 lg:py-32 bg-alabaster">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header & Category Pills -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-border-subtle gap-4">
+          <div>
+            <span class="text-xs uppercase tracking-mega-wide text-champagne-dark font-semibold block mb-2">KURASI ATELIER</span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-espresso font-normal">Koleksi Pilihan BDS</h2>
+          </div>
+          <div class="text-xs text-gray-500 uppercase tracking-widest">
+            Menampilkan <span id="product-count" class="font-bold text-espresso">9</span> Produk Pilihan
+          </div>
+        </div>
+
+        <!-- Filter Bar: Categories + Color Swatches + Sort -->
+        <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-6 mb-12 bg-off-white p-4 sm:p-5 border border-border-subtle">
+          
+          <!-- Category Tabs -->
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs uppercase tracking-wider" id="category-filters">
+            <button class="cat-pill active px-4 py-2 bg-espresso text-white font-medium transition-all" onclick="filterCategory('all', this)">Semua (9)</button>
+            <button class="cat-pill px-4 py-2 bg-transparent text-charcoal hover:bg-surface-low transition-all" onclick="filterCategory('raya', this)">Baju Lebaran (2)</button>
+            <button class="cat-pill px-4 py-2 bg-transparent text-charcoal hover:bg-surface-low transition-all" onclick="filterCategory('hijab', this)">Hijab &amp; Voal (2)</button>
+            <button class="cat-pill px-4 py-2 bg-transparent text-charcoal hover:bg-surface-low transition-all" onclick="filterCategory('beauty', this)">Parfum &amp; Skincare (5)</button>
+          </div>
+
+          <!-- Secondary Filters: Color Swatch & Sort -->
+          <div class="flex flex-wrap items-center gap-4 text-xs">
+            
+            <!-- Color Filter Swatches -->
+            <div class="flex items-center gap-1.5 border-l-0 lg:border-l lg:pl-4 border-border-subtle">
+              <span class="text-[11px] text-gray-500 uppercase mr-1">Warna:</span>
+              <button title="Semua Warna" onclick="filterColor('all')" class="w-6 h-6 rounded-full border border-espresso flex items-center justify-center text-[9px] font-bold">ALL</button>
+              <button title="Champagne / Cream" onclick="filterColor('champagne')" class="w-6 h-6 rounded-full bg-[#E9DCBC] border border-gray-300 hover:scale-110 transition-transform"></button>
+              <button title="Rose / Blush" onclick="filterColor('rose')" class="w-6 h-6 rounded-full bg-[#D4A5A5] border border-gray-300 hover:scale-110 transition-transform"></button>
+              <button title="Terracotta / Earth" onclick="filterColor('terracotta')" class="w-6 h-6 rounded-full bg-[#A8654C] border border-gray-300 hover:scale-110 transition-transform"></button>
+              <button title="Espresso / Black" onclick="filterColor('espresso')" class="w-6 h-6 rounded-full bg-[#231F20] border border-gray-300 hover:scale-110 transition-transform"></button>
+            </div>
+
+            <!-- Search & Sort dropdown -->
+            <div class="flex items-center gap-3">
+              <button id="search-btn" class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-border-subtle hover:border-espresso text-xs uppercase tracking-wider text-espresso transition-colors">
+                <span class="material-symbols-outlined text-sm">search</span>
+                <span>Cari</span>
+              </button>
+              <div class="flex items-center gap-2">
+                <label for="sort-select" class="text-[11px] text-gray-500 uppercase">Urutkan:</label>
+                <select id="sort-select" onchange="sortProducts(this.value)" class="bg-white border border-border-subtle text-xs px-2.5 py-1.5 focus:outline-none">
+                  <option value="featured">Unggulan</option>
+                  <option value="price-asc">Harga: Rendah ke Tinggi</option>
+                  <option value="price-desc">Harga: Tinggi ke Rendah</option>
+                  <option value="name">Nama Produk A-Z</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Product Grid (Aspect Ratio 3:4 cards) -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 6. SPOTLIGHT: JIHAN EAU DE PARFUME INTENSE ==================== -->
+    <section class="py-20 lg:py-28 bg-surface-low border-t border-b border-border-subtle">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Product Showcase Gallery -->
+          <div class="lg:col-span-6 flex flex-col-reverse sm:flex-row gap-4">
+            <!-- Mini Thumbs -->
+            <div class="flex sm:flex-col gap-3 justify-center">
+              <button onclick="changeSpotlightImage('../Image/Jihan.png')" class="w-16 h-20 bg-white border-2 border-espresso overflow-hidden shadow-sm">
+                <img src="../Image/Jihan.png" alt="Jihan 1" class="w-full h-full object-cover">
+              </button>
+              <button onclick="changeSpotlightImage('../Image/BlckVnla.png')" class="w-16 h-20 bg-white border border-border-subtle overflow-hidden opacity-70 hover:opacity-100 transition-opacity">
+                <img src="../Image/BlckVnla.png" alt="Black Vanilla" class="w-full h-full object-cover">
+              </button>
+              <button onclick="changeSpotlightImage('../Image/SweetLove.png')" class="w-16 h-20 bg-white border border-border-subtle overflow-hidden opacity-70 hover:opacity-100 transition-opacity">
+                <img src="../Image/SweetLove.png" alt="Sweet Love" class="w-full h-full object-cover">
+              </button>
+            </div>
+            <!-- Main Large Spotlight Image -->
+            <div class="relative flex-1 aspect-3-4 bg-white overflow-hidden shadow-xl border border-border-subtle">
+              <img id="spotlight-main-img" src="../Image/Jihan.png" alt="BDS Jihan Eau De Parfume" class="w-full h-full object-cover">
+              <span class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur-md text-espresso text-[10px] uppercase tracking-widest font-bold">
+                SIGNATURE SCENT
+              </span>
+            </div>
+          </div>
+
+          <!-- Product Details & Direct Purchase -->
+          <div class="lg:col-span-6">
+            <span class="text-xs uppercase tracking-mega-wide text-champagne-dark font-semibold block mb-2">
+              PARFUM EKSKLUSIF BDS
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-espresso font-normal mb-3">
+              Jihan Eau De Parfume Intense
+            </h2>
+            
+            <!-- Rating & Reviews -->
+            <div class="flex items-center gap-3 mb-6">
+              <div class="flex text-amber-500 text-sm">
+                <span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+              </div>
+              <span class="text-xs text-gray-500 font-light">(164 Ulasan Pelanggan Terverifikasi)</span>
+            </div>
+
+            <!-- Price & Savings -->
+            <div class="flex items-baseline gap-4 mb-6">
+              <span class="font-serif text-3xl sm:text-4xl text-espresso font-medium">Rp 219.000</span>
+              <span class="text-sm text-gray-400 line-through">Rp 259.000</span>
+              <span class="px-2 py-0.5 bg-terracotta text-white text-[10px] uppercase tracking-wider font-semibold">HEMAT RP 40.000</span>
+            </div>
+
+            <p class="font-serif italic text-gray-700 text-base leading-relaxed mb-6">
+              “Wangi yang Jadi Ciri Khasmu — Harmoni kesegaran citrus bergamot, kelembutan floral peony &amp; mawar Turki, ditutup dengan kehangatan amber musk yang bertahan memikat hingga 12 jam.”
+            </p>
+
+            <!-- Fragrance Notes Breakdown -->
+            <div class="grid grid-cols-3 gap-3 mb-8 p-4 bg-white border border-border-subtle text-xs">
+              <div>
+                <span class="text-[10px] text-gray-400 uppercase tracking-widest block">Top Notes</span>
+                <span class="font-semibold text-espresso">Bergamot &amp; Peony</span>
+              </div>
+              <div>
+                <span class="text-[10px] text-gray-400 uppercase tracking-widest block">Heart Notes</span>
+                <span class="font-semibold text-espresso">Turkish Rose</span>
+              </div>
+              <div>
+                <span class="text-[10px] text-gray-400 uppercase tracking-widest block">Base Notes</span>
+                <span class="font-semibold text-espresso">Amber &amp; Musk</span>
+              </div>
+            </div>
+
+            <!-- Size Options -->
+            <div class="mb-8">
+              <label class="block text-xs uppercase tracking-wider text-espresso font-semibold mb-2">Pilihan Paket:</label>
+              <div class="grid grid-cols-2 gap-3">
+                <button class="py-3 px-4 bg-espresso text-white text-xs uppercase tracking-wider font-medium text-center">
+                  30ml Bottle Spray
+                </button>
+                <button class="py-3 px-4 bg-white text-espresso border border-border-subtle text-xs uppercase tracking-wider font-medium text-center hover:border-espresso transition-colors" onclick="quickAddToCart(3)">
+                  Bundling + Hijab (Rp 339K)
+                </button>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button onclick="quickAddToCart(5)" class="flex-1 py-4 bg-espresso text-white text-xs uppercase tracking-ultra-wide font-semibold hover:bg-champagne transition-all shadow-lg flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-base">shopping_bag</span>
+                <span>Tambah ke Tas Belanja</span>
+              </button>
+              <a href="https://wa.me/6281234567890?text=Halo%20Admin%20BDS%2C%20saya%20mau%20pesan%20Parfum%20Jihan%20Eau%20De%20Parfume%20Intense%20(Rp%20219.000)" target="_blank" class="py-4 px-6 bg-white border border-champagne text-espresso text-xs uppercase tracking-wider font-semibold hover:bg-champagne hover:text-white transition-all flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-base text-green-700">chat</span>
+                <span>Pesan Cepat via WA</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. TESTIMONIALS (EDITORIAL SOCIAL PROOF) ==================== -->
+    <section class="py-20 lg:py-28 bg-alabaster">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-14">
+          <span class="text-xs uppercase tracking-mega-wide text-champagne-dark font-semibold block mb-2">COMMUNITY &amp; CLIENTELE</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-espresso font-normal">Kisah &amp; Kesan Pelanggan BDS</h2>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2">Ulasan jujur dari para wanita anggun yang telah mempercayakan penampilan dan keharumannya pada BDS.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Testimonial 1 -->
+          <div class="p-8 bg-off-white border border-border-subtle shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex text-amber-500 text-sm mb-4">
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+              </div>
+              <p class="font-serif italic text-sm text-espresso leading-relaxed mb-6">
+                “Bahan voal ultrafine dari BDS benar-benar berbeda. Tegak di dahi tanpa perlu semprotan, tidak panas dipakai seharian saat silaturahmi Lebaran. Sangat worth it!”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="text-xs uppercase tracking-wider font-semibold text-espresso block">Anindya Putri</span>
+                <span class="text-[10px] text-gray-500 uppercase">Jakarta Selatan</span>
+              </div>
+              <span class="text-[10px] text-champagne uppercase font-medium">Beli: Rose Ombre Voal</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="p-8 bg-off-white border border-border-subtle shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex text-amber-500 text-sm mb-4">
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+              </div>
+              <p class="font-serif italic text-sm text-espresso leading-relaxed mb-6">
+                “Parfum Jihan baunya mewah banget, seperti parfum butik niche Eropa. Di baju wanginya masih nempel sampai 2 hari. Suami juga suka aromanya lembut.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="text-xs uppercase tracking-wider font-semibold text-espresso block">Dra. Farida Nurul</span>
+                <span class="text-[10px] text-gray-500 uppercase">Surabaya</span>
+              </div>
+              <span class="text-[10px] text-champagne uppercase font-medium">Beli: Jihan Eau De Parfume</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="p-8 bg-off-white border border-border-subtle shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex text-amber-500 text-sm mb-4">
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+              </div>
+              <p class="font-serif italic text-sm text-espresso leading-relaxed mb-6">
+                “Baju Lebaran Airin jahitannya sangat rapi, drapes jatuhnya pas di badan dan memberi siluet ramping tapi tetap santun. Pelayanan via WhatsApp sangat cepat.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="text-xs uppercase tracking-wider font-semibold text-espresso block">Siti Rahmawati</span>
+                <span class="text-[10px] text-gray-500 uppercase">Bandung</span>
+              </div>
+              <span class="text-[10px] text-champagne uppercase font-medium">Beli: Airin Silk Raya Set</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 8. FAQ ACCORDION ==================== -->
+    <section class="py-20 lg:py-28 bg-surface-low border-t border-border-subtle">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-14">
+          <span class="text-xs uppercase tracking-mega-wide text-champagne-dark font-semibold block mb-2">CONCIERGE &amp; BANTUAN</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-espresso font-normal">Pertanyaan yang Sering Diajukan</h2>
+        </div>
+
+        <div class="space-y-4" id="faq-accordion">
+          
+          <div class="bg-white border border-border-subtle">
+            <button class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none faq-btn" onclick="toggleFaq(this)">
+              <span class="font-serif text-base text-espresso font-medium">1. Bagaimana cara memesan koleksi BDS?</span>
+              <span class="material-symbols-outlined text-champagne transition-transform duration-300">add</span>
+            </button>
+            <div class="hidden px-6 pb-6 text-xs text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+              Anda dapat berbelanja langsung melalui website ini dengan menambahkan produk ke Tas Belanja (*Shopping Bag*), lalu memilih tombol <strong>"Order via WhatsApp Admin"</strong> untuk konfirmasi instan atau <strong>"Direct Checkout"</strong> untuk pengisian alamat dan pembayaran otomatis.
+            </div>
+          </div>
+
+          <div class="bg-white border border-border-subtle">
+            <button class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none faq-btn" onclick="toggleFaq(this)">
+              <span class="font-serif text-base text-espresso font-medium">2. Apakah bahan voal BDS mudah kusut atau menerawang?</span>
+              <span class="material-symbols-outlined text-champagne transition-transform duration-300">add</span>
+            </button>
+            <div class="hidden px-6 pb-6 text-xs text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+              Kami menggunakan <em>Ultrafine Voal 70s Original</em> dengan kerapatan serat premium. Kainnya tidak menerawang, tidak berdengung di telinga, dingin di kulit kepala, serta sangat mudah dibentuk tegak paripurna di dahi tanpa perlu disemprot pelicin.
+            </div>
+          </div>
+
+          <div class="bg-white border border-border-subtle">
+            <button class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none faq-btn" onclick="toggleFaq(this)">
+              <span class="font-serif text-base text-espresso font-medium">3. Berapa lama pengiriman dan apakah ada gratis ongkir?</span>
+              <span class="material-symbols-outlined text-champagne transition-transform duration-300">add</span>
+            </button>
+            <div class="hidden px-6 pb-6 text-xs text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+              Kami menyediakan <strong>Gratis Ongkir</strong> ke seluruh wilayah Indonesia untuk setiap pembelanjaan minimal Rp 300.000 dengan memasukkan kode <code>BDSLUX</code>. Estimasi pengiriman Jabodetabek adalah 1-2 hari kerja, dan luar kota 2-4 hari kerja via J&amp;T, SiCepat, atau JNE.
+            </div>
+          </div>
+
+          <div class="bg-white border border-border-subtle">
+            <button class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none faq-btn" onclick="toggleFaq(this)">
+              <span class="font-serif text-base text-espresso font-medium">4. Apakah bisa tukar ukuran jika baju Lebaran tidak pas?</span>
+              <span class="material-symbols-outlined text-champagne transition-transform duration-300">add</span>
+            </button>
+            <div class="hidden px-6 pb-6 text-xs text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+              Tentu saja! BDS memberikan <strong>Garansi Penukaran Ukuran 7 Hari</strong> terhitung sejak paket diterima, selama tag label masih terpasang dan pakaian belum dicuci. Tim admin concierge kami siap membantu proses penukaran dengan cepat.
+            </div>
+          </div>
+
+          <div class="bg-white border border-border-subtle">
+            <button class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none faq-btn" onclick="toggleFaq(this)">
+              <span class="font-serif text-base text-espresso font-medium">5. Apakah produk parfum &amp; body serum sudah BPOM?</span>
+              <span class="material-symbols-outlined text-champagne transition-transform duration-300">add</span>
+            </button>
+            <div class="hidden px-6 pb-6 text-xs text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+              Seluruh lini wewangian (Jihan, Black Vanilla, Sweet Love) serta produk perawatan tubuh (Whitening Booster Serum &amp; Body Lotion) 100% telah bersertifikasi BPOM, halal, dan aman digunakan untuk ibu hamil maupun menyusui.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== PRODUCT DETAIL MODAL (PDP) ==================== -->
+  <div id="pdp-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4 transition-all">
+    <div class="bg-off-white w-full max-w-4xl max-h-[92vh] overflow-y-auto shadow-2xl border border-border-subtle relative animate-slide-up">
+      <button onclick="closePdpModal()" class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-white/80 hover:bg-espresso hover:text-white flex items-center justify-center text-espresso transition-colors">
+        <span class="material-symbols-outlined text-lg">close</span>
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 p-6 sm:p-10">
+        
+        <!-- Left: Image Showcase -->
+        <div class="md:col-span-6 flex flex-col gap-4">
+          <div class="aspect-3-4 w-full bg-surface-low overflow-hidden border border-border-subtle shadow-md">
+            <img id="pdp-img" src="" alt="Detail Produk" class="w-full h-full object-cover">
+          </div>
+          <div id="pdp-badges" class="flex flex-wrap gap-2 text-[10px] uppercase tracking-wider font-semibold">
+            <!-- Dynamic Badges -->
+          </div>
+        </div>
+
+        <!-- Right: Information & Customizer Panel -->
+        <div class="md:col-span-6 flex flex-col justify-between">
+          <div>
+            <span id="pdp-category" class="text-xs uppercase tracking-mega-wide text-champagne-dark font-semibold block mb-1">
+              KATEGORI
+            </span>
+            <h3 id="pdp-title" class="font-serif text-2xl sm:text-3xl text-espresso font-normal mb-2 leading-snug">
+              Nama Produk
+            </h3>
+            
+            <div class="flex items-baseline gap-3 mb-4">
+              <span id="pdp-price" class="font-serif text-2xl text-espresso font-medium">Rp 0</span>
+              <span id="pdp-orig-price" class="text-xs text-gray-400 line-through">Rp 0</span>
+            </div>
+
+            <p id="pdp-desc" class="text-xs text-gray-600 leading-relaxed mb-6 font-light">
+              Deskripsi lengkap produk...
+            </p>
+
+            <!-- Color Swatches Selector -->
+            <div class="mb-5">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-xs uppercase tracking-wider font-semibold text-espresso">Pilihan Warna:</span>
+                <span id="pdp-selected-color-name" class="text-xs text-champagne-dark font-medium">Warm Alabaster</span>
+              </div>
+              <div id="pdp-color-swatches" class="flex items-center gap-2">
+                <!-- Color pills dynamic -->
+              </div>
+            </div>
+
+            <!-- Size Selector Pills -->
+            <div class="mb-6">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-xs uppercase tracking-wider font-semibold text-espresso">Pilihan Ukuran:</span>
+                <span class="text-[11px] text-gray-400">Ready Stock</span>
+              </div>
+              <div id="pdp-size-pills" class="flex items-center gap-2">
+                <!-- Size pills dynamic -->
+              </div>
+            </div>
+
+            <!-- Accordion Tabs: Material & Care, Size Guide -->
+            <div class="border-t border-b border-border-subtle divide-y divide-border-subtle mb-6 text-xs">
+              <details class="py-3 group cursor-pointer">
+                <summary class="font-semibold text-espresso flex justify-between items-center uppercase tracking-wider">
+                  <span>Material &amp; Perawatan</span>
+                  <span class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+                </summary>
+                <p id="pdp-material" class="mt-2 text-gray-600 leading-relaxed">
+                  Voal Ultrafine 70s. Cuci lembut dengan tangan, jangan diperas kencang, setrika suhu sedang.
+                </p>
+              </details>
+              <details class="py-3 group cursor-pointer">
+                <summary class="font-semibold text-espresso flex justify-between items-center uppercase tracking-wider">
+                  <span>Panduan Ukuran (Size Guide)</span>
+                  <span class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+                </summary>
+                <div class="mt-2 text-gray-600 overflow-x-auto">
+                  <table class="w-full text-left text-[11px] border border-gray-200">
+                    <tr class="bg-gray-100">
+                      <th class="p-1.5">Size</th><th class="p-1.5">Lingkar Dada</th><th class="p-1.5">Panjang Baju</th>
+                    </tr>
+                    <tr><td class="p-1.5">S</td><td class="p-1.5">94 cm</td><td class="p-1.5">138 cm</td></tr>
+                    <tr><td class="p-1.5">M</td><td class="p-1.5">100 cm</td><td class="p-1.5">140 cm</td></tr>
+                    <tr><td class="p-1.5">L</td><td class="p-1.5">106 cm</td><td class="p-1.5">142 cm</td></tr>
+                    <tr><td class="p-1.5">XL</td><td class="p-1.5">112 cm</td><td class="p-1.5">142 cm</td></tr>
+                  </table>
+                </div>
+              </details>
+            </div>
+
+          </div>
+
+          <!-- PDP CTAs -->
+          <div class="flex flex-col gap-2.5">
+            <button id="pdp-add-to-cart-btn" class="w-full py-3.5 bg-espresso text-white text-xs uppercase tracking-ultra-wide font-semibold hover:bg-champagne transition-all flex items-center justify-center gap-2 shadow-md">
+              <span class="material-symbols-outlined text-base">shopping_bag</span>
+              <span>Tambah ke Tas Belanja</span>
+            </button>
+            <button id="pdp-wa-order-btn" class="w-full py-3 bg-white border border-champagne text-espresso text-xs uppercase tracking-wider font-semibold hover:bg-champagne hover:text-white transition-all flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-base text-green-700">chat</span>
+              <span>Order via WhatsApp Admin</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE-OVER SHOPPING CART DRAWER ==================== -->
+  <div id="cart-drawer-overlay" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden transition-opacity duration-300">
+    <div id="cart-drawer" class="fixed inset-y-0 right-0 max-w-full w-full sm:w-[480px] bg-off-white shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out border-l border-border-subtle">
+      
+      <!-- Drawer Header -->
+      <div class="p-6 border-b border-border-subtle flex items-center justify-between bg-alabaster">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-xl text-champagne">shopping_bag</span>
+          <h3 class="font-serif text-lg text-espresso font-medium">Tas Belanja BDS</h3>
+          <span id="cart-items-total-pill" class="text-xs px-2 py-0.5 bg-espresso text-white rounded-full">0</span>
+        </div>
+        <button id="close-cart-btn" class="text-espresso hover:text-terracotta p-1">
+          <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+      </div>
+
+      <!-- Free Shipping Progress Tracker -->
+      <div class="px-6 py-3 bg-surface-low border-b border-border-subtle text-xs">
+        <div class="flex justify-between items-center mb-1 text-[11px] uppercase tracking-wider">
+          <span id="shipping-tracker-label">Gratis Ongkir Se-Indonesia:</span>
+          <span id="shipping-tracker-status" class="font-bold text-terracotta">Kurang Rp 300.000</span>
+        </div>
+        <div class="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
+          <div id="shipping-progress-bar" class="h-full bg-champagne transition-all duration-500" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Drawer Items List -->
+      <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 space-y-4 divide-y divide-border-subtle">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <!-- Drawer Footer & Checkout Actions -->
+      <div class="p-6 bg-alabaster border-t border-border-subtle space-y-4">
+        
+        <!-- Promo Voucher input -->
+        <div class="flex items-center gap-2">
+          <input id="voucher-code" type="text" placeholder="KODE PROMO (misal: BDSLUX)" class="flex-1 text-xs uppercase px-3 py-2 bg-white border border-border-subtle focus:outline-none">
+          <button onclick="applyVoucher()" class="px-4 py-2 bg-espresso text-white text-xs uppercase tracking-wider hover:bg-champagne transition-colors">Terapkan</button>
+        </div>
+        <div id="voucher-status" class="text-[11px] text-green-700 font-medium hidden"></div>
+
+        <!-- Price Breakdown -->
+        <div class="space-y-1.5 text-xs text-gray-600">
+          <div class="flex justify-between">
+            <span>Subtotal Produk:</span>
+            <span id="cart-subtotal" class="font-semibold text-espresso">Rp 0</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Diskon Promo:</span>
+            <span id="cart-discount" class="text-terracotta font-medium">- Rp 0</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Estimasi Ongkir:</span>
+            <span id="cart-shipping" class="text-green-700 font-medium">Dihitung otomatis</span>
+          </div>
+          <div class="flex justify-between pt-2 border-t border-border-subtle text-sm text-espresso font-bold font-serif">
+            <span>Total Akhir:</span>
+            <span id="cart-grand-total">Rp 0</span>
+          </div>
+        </div>
+
+        <!-- Checkout Options -->
+        <div class="space-y-2 pt-2">
+          <!-- WhatsApp Admin Checkout Flow -->
+          <button onclick="checkoutViaWhatsApp()" class="w-full py-3.5 bg-[#25D366] text-white text-xs uppercase tracking-wider font-bold hover:bg-[#1EBE5D] transition-colors flex items-center justify-center gap-2 shadow-md">
+            <span class="material-symbols-outlined text-base">chat</span>
+            <span>Order Cepat via WhatsApp Admin</span>
+          </button>
+          
+          <!-- Direct Checkout Flow Modal Trigger -->
+          <button onclick="openDirectCheckoutModal()" class="w-full py-3 bg-espresso text-white text-xs uppercase tracking-ultra-wide font-semibold hover:bg-champagne transition-colors flex items-center justify-center gap-2">
+            <span>Checkout Langsung / Rincian</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </button>
+        </div>
+
+        <p class="text-[10px] text-center text-gray-500 uppercase tracking-widest">
+          Aman &bull; Bebas Ribet &bull; Garansi 100% Produk Asli
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== DIRECT CHECKOUT MODAL ==================== -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4 transition-all">
+    <div class="bg-off-white w-full max-w-xl max-h-[90vh] overflow-y-auto shadow-2xl border border-border-subtle p-6 sm:p-8 relative animate-slide-up">
+      <button onclick="closeDirectCheckoutModal()" class="absolute top-5 right-5 text-espresso hover:text-terracotta">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+
+      <span class="text-xs uppercase tracking-widest text-champagne-dark font-semibold block mb-1">PENGIRIMAN &amp; PEMBAYARAN</span>
+      <h3 class="font-serif text-2xl text-espresso font-normal mb-6">Ringkasan Pesanan BDS</h3>
+
+      <form id="direct-checkout-form" onsubmit="submitDirectOrder(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block uppercase tracking-wider text-gray-600 font-semibold mb-1">Nama Lengkap Penerima:</label>
+          <input required id="cust-name" type="text" placeholder="Contoh: Sarah Anindya" class="w-full p-2.5 bg-white border border-border-subtle focus:outline-none">
+        </div>
+        <div>
+          <label class="block uppercase tracking-wider text-gray-600 font-semibold mb-1">Nomor WhatsApp Aktif:</label>
+          <input required id="cust-phone" type="tel" placeholder="081234567890" class="w-full p-2.5 bg-white border border-border-subtle focus:outline-none">
+        </div>
+        <div>
+          <label class="block uppercase tracking-wider text-gray-600 font-semibold mb-1">Alamat Lengkap Pengiriman:</label>
+          <textarea required id="cust-address" rows="3" placeholder="Nama Jalan, No. Rumah, RT/RW, Kelurahan, Kecamatan, Kota, Kode Pos" class="w-full p-2.5 bg-white border border-border-subtle focus:outline-none"></textarea>
+        </div>
+        <div>
+          <label class="block uppercase tracking-wider text-gray-600 font-semibold mb-1">Metode Pembayaran:</label>
+          <select id="cust-payment" class="w-full p-2.5 bg-white border border-border-subtle focus:outline-none">
+            <option value="Transfer BCA">Transfer Bank BCA (Konfirmasi Otomatis)</option>
+            <option value="Transfer Mandiri">Transfer Bank Mandiri</option>
+            <option value="QRIS">QRIS All Payment (GoPay, OVO, ShopeePay, Dana)</option>
+            <option value="WhatsApp Concierge">Selesaikan via WhatsApp Admin</option>
+          </select>
+        </div>
+
+        <div class="p-4 bg-surface-low border border-border-subtle space-y-2 mt-4">
+          <div class="flex justify-between font-bold text-sm text-espresso font-serif">
+            <span>Total yang Harus Dibayar:</span>
+            <span id="modal-checkout-total">Rp 0</span>
+          </div>
+          <p class="text-[11px] text-gray-500">Nomor rekening transfer dan instruksi pembayaran akan segera dikirimkan ke WhatsApp Anda setelah pesanan dikonfirmasi.</p>
+        </div>
+
+        <button type="submit" class="w-full py-4 bg-espresso text-white text-xs uppercase tracking-ultra-wide font-semibold hover:bg-champagne transition-all shadow-lg mt-6">
+          Konfirmasi &amp; Proses Pesanan
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== TOAST NOTIFICATION ==================== -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-espresso text-white px-5 py-3.5 shadow-2xl border-l-4 border-champagne flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <span class="material-symbols-outlined text-champagne text-xl">check_circle</span>
+    <span id="toast-message" class="text-xs uppercase tracking-wider font-medium">Produk berhasil ditambahkan ke tas!</span>
+  </div>
+
+  <!-- ==================== LUXURY FOOTER ==================== -->
+  <footer class="bg-off-white border-t border-border-subtle pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="../Image/bds-logo-clean.png" alt="BDS Logo" class="h-10 w-auto object-contain">
+            <span class="font-serif text-xl tracking-[0.25em] text-espresso uppercase font-normal">BDS ATELIER</span>
+          </div>
+          <p class="text-xs text-gray-600 leading-relaxed max-w-sm mb-6 font-light">
+            Butik busana muslimah, hijab eksklusif, dan wewangian mewah. Menggabungkan seni tradisi dengan estetika editorial modern untuk keanggunan sehari-hari dan hari raya.
+          </p>
+          <div class="flex items-center gap-4 text-espresso">
+            <a href="https://instagram.com" target="_blank" class="p-2 bg-surface-low hover:bg-champagne hover:text-white transition-colors rounded-sm" title="Instagram">
+              <span class="text-xs font-bold">IG</span>
+            </a>
+            <a href="https://tiktok.com" target="_blank" class="p-2 bg-surface-low hover:bg-champagne hover:text-white transition-colors rounded-sm" title="TikTok">
+              <span class="text-xs font-bold">TT</span>
+            </a>
+            <a href="https://wa.me/6281234567890" target="_blank" class="p-2 bg-surface-low hover:bg-champagne hover:text-white transition-colors rounded-sm" title="WhatsApp Admin">
+              <span class="text-xs font-bold">WA</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Kategori Koleksi -->
+        <div>
+          <h4 class="text-xs uppercase tracking-mega-wide font-semibold text-espresso mb-4 pb-2 border-b border-border-subtle">Kategori</h4>
+          <ul class="space-y-2.5 text-xs text-gray-600">
+            <li><a href="#katalog" onclick="filterCategory('raya')" class="hover:text-espresso transition-colors">Koleksi Lebaran &amp; Raya</a></li>
+            <li><a href="#katalog" onclick="filterCategory('hijab')" class="hover:text-espresso transition-colors">Voal &amp; Hijab Signature</a></li>
+            <li><a href="#katalog" onclick="filterCategory('beauty')" class="hover:text-espresso transition-colors">Parfum Jihan Intense</a></li>
+            <li><a href="#katalog" onclick="filterCategory('beauty')" class="hover:text-espresso transition-colors">Body Serum &amp; Lotion</a></li>
+            <li><a href="#lookbook" class="hover:text-espresso transition-colors">Editorial Lookbook 2025</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Layanan & Butik -->
+        <div>
+          <h4 class="text-xs uppercase tracking-mega-wide font-semibold text-espresso mb-4 pb-2 border-b border-border-subtle">Concierge</h4>
+          <ul class="space-y-2.5 text-xs text-gray-600">
+            <li><a href="https://wa.me/6281234567890" target="_blank" class="hover:text-espresso transition-colors">Konsultasi Ukuran Busana</a></li>
+            <li><a href="#brand-story" class="hover:text-espresso transition-colors">Filosofi Jahitan &amp; Bahan</a></li>
+            <li><a href="#faq-accordion" class="hover:text-espresso transition-colors">Panduan Retur &amp; Garansi</a></li>
+            <li><a href="#faq-accordion" class="hover:text-espresso transition-colors">Layanan Pengiriman</a></li>
+            <li><a href="https://wa.me/6281234567890" target="_blank" class="hover:text-espresso transition-colors">Pemesanan Khusus Sarimbit</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <h4 class="text-xs uppercase tracking-mega-wide font-semibold text-espresso mb-4 pb-2 border-b border-border-subtle">Atelier Journal</h4>
+          <p class="text-xs text-gray-600 mb-4 font-light">Dapatkan akses privat ke rilis busana terbatas dan diskon khusus.</p>
+          <form onsubmit="subscribeNewsletter(event)" class="space-y-2">
+            <input type="email" required placeholder="EMAIL ANDA" class="w-full text-xs uppercase px-3 py-2.5 bg-white border border-border-subtle focus:outline-none placeholder:text-gray-400">
+            <button type="submit" class="w-full py-2.5 bg-espresso text-white text-xs uppercase tracking-wider font-semibold hover:bg-champagne transition-colors">
+              Berlangganan
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Watermark Giant Monogram Typography -->
+      <div class="py-8 border-t border-border-subtle overflow-hidden select-none pointer-events-none text-center">
+        <p class="font-serif text-[18vw] leading-none text-surface-low/80 uppercase font-normal tracking-tight">
+          BDS
+        </p>
+      </div>
+
+      <!-- Copyright & Bottom Links -->
+      <div class="pt-6 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 gap-4">
+        <p>&copy; 2025 BDS (BATAVIA DELIGHT SIGNATURE). ALL RIGHTS RESERVED.</p>
+        <div class="flex items-center gap-6 uppercase tracking-wider">
+          <a href="#" class="hover:text-espresso transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-espresso transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-espresso transition-colors">Accessibility</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== JAVASCRIPT LOGIC & STATE MANAGEMENT ==================== -->
+  <script>
+    // 1. PRODUCTS DATABASE (Using real assets from ../Image/ folder)
+    const products = [
+      {
+        id: 1,
+        title: "Airin Silk Modest Dress",
+        category: "raya",
+        categoryLabel: "Koleksi Lebaran • Raya Series",
+        price: 789000,
+        origPrice: 899000,
+        badge: "EID SPECIAL",
+        image: "../Image/Airin.png",
+        colors: [
+          { name: "Champagne Gold", hex: "#E9DCBC" },
+          { name: "Warm Terracotta", hex: "#A8654C" },
+          { name: "Pure Alabaster", hex: "#F9F6F0" }
+        ],
+        sizes: ["S", "M", "L", "XL"],
+        desc: "Koleksi busana Hari Raya istimewa berpotongan A-line anggun dengan sentuhan kain silk crepe premium dan aksen bordir renda halus. Siluet jatuh mempesona dan sangat sejuk untuk silaturahmi seharian.",
+        material: "Pure Silk Crepe & Chantilly Lace Detail. Dry clean atau cuci lembut dengan tangan."
+      },
+      {
+        id: 2,
+        title: "Naira Royal Abaya Set",
+        category: "raya",
+        categoryLabel: "Koleksi Lebaran • Abaya Set",
+        price: 829000,
+        origPrice: 950000,
+        badge: "BESTSELLER",
+        image: "../Image/Naira.png",
+        colors: [
+          { name: "Deep Charcoal", hex: "#2C2A29" },
+          { name: "Warm Terracotta", hex: "#A8654C" },
+          { name: "Soft Muted Rose", hex: "#D4A5A5" }
+        ],
+        sizes: ["S", "M", "L", "XL"],
+        desc: "Set abaya mewah dengan bukaan depan praktis dan aksen detail drape di lengan. Dilengkapi manset berhias kancing mutiara eksklusif yang memancarkan pesona kesantunan kelas atas.",
+        material: "Imperial Silk Blend. Lembut, anti-kusut, dan jatuh melambai sempurna."
+      },
+      {
+        id: 3,
+        title: "Rose Ombre Voal Hijab",
+        category: "hijab",
+        categoryLabel: "Hijab & Voal • Gradient Series",
+        price: 189000,
+        origPrice: 229000,
+        badge: "LIMITED DROP",
+        image: "../Image/Rose Ombre.png",
+        colors: [
+          { name: "Rose Ombre Gradient", hex: "#D4A5A5" },
+          { name: "Champagne Peach", hex: "#E9DCBC" }
+        ],
+        sizes: ["120 x 120 cm (All Size)"],
+        desc: "Hijab segi empat motif gradasi warna rose ombre yang syahdu dan feminin. Tepi lasercut rapi serta serat voal ultrafine yang mudah dibentuk tanpa perlu disetrika berulang kali.",
+        material: "Ultrafine Voal 70s Original. Lasercut edge finishing."
+      },
+      {
+        id: 4,
+        title: "BDS Signature Voile Hijab",
+        category: "hijab",
+        categoryLabel: "Hijab & Voal • Everyday Luxury",
+        price: 149000,
+        origPrice: 179000,
+        badge: "MUST-HAVE",
+        image: "../Image/Head.png",
+        colors: [
+          { name: "Warm Alabaster", hex: "#F9F6F0" },
+          { name: "Deep Espresso", hex: "#231F20" },
+          { name: "Champagne Cream", hex: "#E9DCBC" }
+        ],
+        sizes: ["115 x 115 cm (All Size)"],
+        desc: "Hijab polos esensial pilihan para muslimah berkarakter. Tekstur benang rapat, dingin di kepala, tidak mendengung, serta tegak paripurna di dahi sepanjang hari.",
+        material: "Voal Ultrafine Signature Soft Touch dengan pin logo BDS monogram."
+      },
+      {
+        id: 5,
+        title: "Jihan Eau De Parfume Intense 30ml",
+        category: "beauty",
+        categoryLabel: "Parfum Eksklusif • Signature Scent",
+        price: 219000,
+        origPrice: 259000,
+        badge: "ICONIC FRAGRANCE",
+        image: "../Image/Jihan.png",
+        colors: [
+          { name: "Amber Gold Bottle", hex: "#C5A880" }
+        ],
+        sizes: ["30ml Spray", "Bundling + Hijab (Rp 339K)"],
+        desc: "Wangi yang Jadi Ciri Khasmu. Diracik dari intisari Bergamot Italia, bunga Peony mekar, mawar Turki, serta amber musk yang meninggalkan jejak aroma mewah hingga 12 jam.",
+        material: "Eau De Parfum Konsentrat 25%. BPOM Certified: NA18240601290."
+      },
+      {
+        id: 6,
+        title: "Black Vanilla Eau De Parfume 30ml",
+        category: "beauty",
+        categoryLabel: "Parfum Eksklusif • Bold & Warm",
+        price: 229000,
+        origPrice: 269000,
+        badge: "NEW RELEASE",
+        image: "../Image/BlckVnla.png",
+        colors: [
+          { name: "Charcoal Obsidian", hex: "#231F20" }
+        ],
+        sizes: ["30ml Spray"],
+        desc: "Wewangian yang memadukan kehangatan dark bourbon vanilla dengan sentuhan roasted tonka bean dan smoky cedarwood. Menghadirkan aura memikat, percaya diri, dan berkelas.",
+        material: "Eau De Parfum Konsentrat 25%. BPOM Certified: NA18240601291."
+      },
+      {
+        id: 7,
+        title: "Sweet Love Eau De Parfume 30ml",
+        category: "beauty",
+        categoryLabel: "Parfum Eksklusif • Floral Sweet",
+        price: 219000,
+        origPrice: 259000,
+        badge: "ROMANTIC SCENT",
+        image: "../Image/SweetLove.png",
+        colors: [
+          { name: "Blush Petal", hex: "#D4A5A5" }
+        ],
+        sizes: ["30ml Spray"],
+        desc: "Kombinasi manis buah raspberry segar, bunga melati, dan sentuhan halus madu manis serta cotton candy lembut. Pilihan tepat untuk suasana ceria dan kencan istimewa.",
+        material: "Eau De Parfum Konsentrat 25%. BPOM Certified: NA18240601292."
+      },
+      {
+        id: 8,
+        title: "BDS Whitening Booster Body Serum",
+        category: "beauty",
+        categoryLabel: "Body Care • Intensive Brightening",
+        price: 135000,
+        origPrice: 165000,
+        badge: "BPOM CERTIFIED",
+        image: "../Image/Serum.png",
+        colors: [
+          { name: "Silky Serum", hex: "#FDFBF7" }
+        ],
+        sizes: ["150ml Pump"],
+        desc: "Formula serum konsentrat tinggi dengan 5% Niacinamide, Alpha Arbutin, dan Hyaluronic Complex. Meresap instan dalam 3 detik untuk mencerahkan kulit kusam dan meratakan warna kulit.",
+        material: "Serum Perawatan Tubuh. BPOM Certified: NA18240101567."
+      },
+      {
+        id: 9,
+        title: "BDS Brightening Velvet Body Lotion",
+        category: "beauty",
+        categoryLabel: "Body Care • Deep Moisture",
+        price: 145000,
+        origPrice: 175000,
+        badge: "MUST-HAVE",
+        image: "../Image/Lotion.png",
+        colors: [
+          { name: "Velvet Cream", hex: "#FDFBF7" }
+        ],
+        sizes: ["200ml Bottle"],
+        desc: "Body lotion bertekstur velvet lembut yang mengunci kelembapan hingga 24 jam dengan kandungan Shea Butter, Vitamin E, Glutathione, dan perlindungan UV Filter SPF 30 PA+++.",
+        material: "Lotion Pelembap Tubuh & UV Shield. BPOM Certified: NA18240101568."
+      }
+    ];
+
+    // 2. SHOPPING CART STATE
+    let cart = [];
+    let currentVoucher = null;
+    let selectedPdpProduct = null;
+    let selectedColorIndex = 0;
+    let selectedSize = '';
+
+    // Format Currency IDR
+    function formatIDR(amount) {
+      return 'Rp ' + amount.toLocaleString('id-ID');
+    }
+
+    // 3. RENDER PRODUCTS GRID
+    let currentCategory = 'all';
+    let currentColor = 'all';
+    let currentSort = 'featured';
+
+    function renderProducts() {
+      const grid = document.getElementById('product-grid');
+      let filtered = products.filter(p => {
+        const catMatch = currentCategory === 'all' || p.category === currentCategory;
+        const colorMatch = currentColor === 'all' || p.colors.some(c => {
+          if (currentColor === 'champagne') return c.name.toLowerCase().includes('champagne') || c.name.toLowerCase().includes('alabaster');
+          if (currentColor === 'rose') return c.name.toLowerCase().includes('rose') || c.name.toLowerCase().includes('blush');
+          if (currentColor === 'terracotta') return c.name.toLowerCase().includes('terracotta') || c.name.toLowerCase().includes('amber');
+          if (currentColor === 'espresso') return c.name.toLowerCase().includes('espresso') || c.name.toLowerCase().includes('charcoal');
+          return true;
+        });
+        return catMatch && colorMatch;
+      });
+
+      // Sort
+      if (currentSort === 'price-asc') filtered.sort((a,b) => a.price - b.price);
+      else if (currentSort === 'price-desc') filtered.sort((a,b) => b.price - a.price);
+      else if (currentSort === 'name') filtered.sort((a,b) => a.title.localeCompare(b.title));
+
+      document.getElementById('product-count').textContent = filtered.length;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center text-gray-500">
+            <span class="material-symbols-outlined text-4xl mb-2 text-champagne">inventory_2</span>
+            <p class="font-serif text-lg text-espresso">Belum ada produk yang cocok dengan filter yang dipilih.</p>
+            <button onclick="filterCategory('all')" class="mt-4 px-6 py-2 bg-espresso text-white text-xs uppercase tracking-wider">Tampilkan Semua Koleksi</button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => `
+        <div class="group flex flex-col bg-off-white border border-border-subtle p-3.5 transition-all duration-300 hover:shadow-xl">
+          <div class="relative w-full aspect-3-4 bg-surface-low overflow-hidden mb-4 cursor-pointer" onclick="openPdpModal(${p.id})">
+            <span class="absolute top-3 left-3 z-10 px-2.5 py-1 badge-blur text-espresso font-semibold text-[9px] uppercase tracking-widest shadow-sm border border-border-subtle">
+              ${p.badge}
+            </span>
+            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+            
+            <!-- Quick View Overlay -->
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <button onclick="event.stopPropagation(); openPdpModal(${p.id})" class="w-full py-2.5 bg-white text-espresso text-[10px] uppercase tracking-widest font-bold hover:bg-espresso hover:text-white transition-colors shadow-lg">
+                Lihat Detail Lengkap
+              </button>
+            </div>
+          </div>
+
+          <div class="flex flex-col flex-1 justify-between">
+            <div>
+              <span class="text-[10px] uppercase tracking-wider text-champagne-dark font-medium block mb-1">
+                ${p.categoryLabel}
+              </span>
+              <h3 onclick="openPdpModal(${p.id})" class="font-serif text-base text-espresso font-medium cursor-pointer hover:underline line-clamp-1 mb-2">
+                ${p.title}
+              </h3>
+            </div>
+
+            <!-- Color Swatches Preview -->
+            <div class="flex items-center gap-1.5 mb-3">
+              ${p.colors.map(c => `
+                <span title="${c.name}" class="w-3.5 h-3.5 rounded-full border border-gray-300" style="background-color: ${c.hex}"></span>
+              `).join('')}
+            </div>
+
+            <div class="flex items-center justify-between pt-3 border-t border-border-subtle">
+              <div class="flex items-baseline gap-2">
+                <span class="font-serif text-base font-semibold text-espresso">${formatIDR(p.price)}</span>
+                <span class="text-xs text-gray-400 line-through">${formatIDR(p.origPrice)}</span>
+              </div>
+              <button onclick="quickAddToCart(${p.id})" title="Tambah ke Tas" class="p-2 bg-espresso text-white hover:bg-champagne transition-colors flex items-center justify-center rounded-sm">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Filter Category
+    function filterCategory(cat, btn) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-pill').forEach(el => {
+        el.classList.remove('bg-espresso', 'text-white', 'active');
+        el.classList.add('bg-transparent', 'text-charcoal');
+      });
+      if (btn) {
+        btn.classList.add('bg-espresso', 'text-white', 'active');
+        btn.classList.remove('bg-transparent', 'text-charcoal');
+      }
+      renderProducts();
+    }
+
+    // Filter Color
+    function filterColor(color) {
+      currentColor = color;
+      renderProducts();
+    }
+
+    // Sort Products
+    function sortProducts(val) {
+      currentSort = val;
+      renderProducts();
+    }
+
+    // 4. PDP (PRODUCT DETAIL MODAL)
+    function openPdpModal(productId) {
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
+      selectedPdpProduct = product;
+      selectedColorIndex = 0;
+      selectedSize = product.sizes[0];
+
+      document.getElementById('pdp-img').src = product.image;
+      document.getElementById('pdp-category').textContent = product.categoryLabel;
+      document.getElementById('pdp-title').textContent = product.title;
+      document.getElementById('pdp-price').textContent = formatIDR(product.price);
+      document.getElementById('pdp-orig-price').textContent = formatIDR(product.origPrice);
+      document.getElementById('pdp-desc').textContent = product.desc;
+      document.getElementById('pdp-material').textContent = product.material;
+
+      // Badges
+      document.getElementById('pdp-badges').innerHTML = `
+        <span class="px-2.5 py-1 bg-espresso text-white">${product.badge}</span>
+        <span class="px-2.5 py-1 bg-surface-low border border-border-subtle text-espresso">Garansi Original 100%</span>
+      `;
+
+      // Swatches
+      const swatchesContainer = document.getElementById('pdp-color-swatches');
+      document.getElementById('pdp-selected-color-name').textContent = product.colors[0].name;
+      swatchesContainer.innerHTML = product.colors.map((c, i) => `
+        <button onclick="selectPdpColor(${i})" class="w-7 h-7 rounded-full border-2 ${i === 0 ? 'border-espresso scale-110' : 'border-transparent'} p-0.5 transition-all">
+          <span class="block w-full h-full rounded-full border border-gray-300" style="background-color: ${c.hex}"></span>
+        </button>
+      `).join('');
+
+      // Sizes
+      const sizesContainer = document.getElementById('pdp-size-pills');
+      sizesContainer.innerHTML = product.sizes.map((s, i) => `
+        <button onclick="selectPdpSize('${s}', this)" class="size-pill px-3 py-1.5 border text-xs uppercase tracking-wider font-medium ${i === 0 ? 'bg-espresso text-white border-espresso' : 'bg-white text-espresso border-border-subtle hover:border-espresso'} transition-all">
+          ${s}
+        </button>
+      `).join('');
+
+      // Add to Bag CTA
+      document.getElementById('pdp-add-to-cart-btn').onclick = () => {
+        addToCart(product, product.colors[selectedColorIndex].name, selectedSize);
+        closePdpModal();
+      };
+
+      // Order via WA CTA
+      document.getElementById('pdp-wa-order-btn').onclick = () => {
+        const text = encodeURIComponent(`Halo Admin BDS, saya ingin memesan produk:\n- ${product.title}\n- Warna: ${product.colors[selectedColorIndex].name}\n- Ukuran: ${selectedSize}\n- Harga: ${formatIDR(product.price)}\n\nMohon info ketersediaan stok & cara pembayarannya. Terima kasih!`);
+        window.open(`https://wa.me/6281234567890?text=${text}`, '_blank');
+      };
+
+      const modal = document.getElementById('pdp-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function selectPdpColor(index) {
+      selectedColorIndex = index;
+      document.getElementById('pdp-selected-color-name').textContent = selectedPdpProduct.colors[index].name;
+      const buttons = document.getElementById('pdp-color-swatches').children;
+      for (let i = 0; i < buttons.length; i++) {
+        if (i === index) {
+          buttons[i].classList.add('border-espresso', 'scale-110');
+          buttons[i].classList.remove('border-transparent');
+        } else {
+          buttons[i].classList.remove('border-espresso', 'scale-110');
+          buttons[i].classList.add('border-transparent');
+        }
+      }
+    }
+
+    function selectPdpSize(size, btn) {
+      selectedSize = size;
+      document.querySelectorAll('.size-pill').forEach(el => {
+        el.classList.remove('bg-espresso', 'text-white', 'border-espresso');
+        el.classList.add('bg-white', 'text-espresso', 'border-border-subtle');
+      });
+      btn.classList.add('bg-espresso', 'text-white', 'border-espresso');
+      btn.classList.remove('bg-white', 'text-espresso', 'border-border-subtle');
+    }
+
+    function closePdpModal() {
+      const modal = document.getElementById('pdp-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // 5. SHOPPING CART LOGIC
+    function quickAddToCart(productId) {
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
+      addToCart(product, product.colors[0].name, product.sizes[0]);
+    }
+
+    function addToCart(product, color, size) {
+      const existing = cart.find(item => item.id === product.id && item.color === color && item.size === size);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({
+          id: product.id,
+          title: product.title,
+          price: product.price,
+          image: product.image,
+          color: color,
+          size: size,
+          qty: 1
+        });
+      }
+      updateCartUI();
+      showToast(`Berhasil menambahkan "${product.title}" ke tas!`);
+      openCartDrawer();
+    }
+
+    function updateCartQty(index, delta) {
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) {
+        cart.splice(index, 1);
+      }
+      updateCartUI();
+    }
+
+    function removeCartItem(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      document.getElementById('cart-badge-count').textContent = totalItems;
+      document.getElementById('cart-items-total-pill').textContent = `${totalItems} Barang`;
+
+      const container = document.getElementById('cart-items-container');
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="py-16 text-center text-gray-500">
+            <span class="material-symbols-outlined text-5xl mb-3 text-champagne">shopping_bag</span>
+            <p class="font-serif text-lg text-espresso mb-1">Tas Belanja Anda Kosong</p>
+            <p class="text-xs text-gray-400 mb-6">Silakan pilih busana atau parfum favorit Anda.</p>
+            <button onclick="closeCartDrawer()" class="px-6 py-2.5 bg-espresso text-white text-xs uppercase tracking-wider">Mulai Berbelanja</button>
+          </div>
+        `;
+      } else {
+        container.innerHTML = cart.map((item, idx) => `
+          <div class="flex gap-4 pt-4 first:pt-0">
+            <div class="w-20 h-24 bg-surface-low overflow-hidden border border-border-subtle flex-shrink-0">
+              <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover">
+            </div>
+            <div class="flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-start">
+                  <h4 class="font-serif text-sm font-semibold text-espresso line-clamp-1">${item.title}</h4>
+                  <button onclick="removeCartItem(${idx})" class="text-gray-400 hover:text-terracotta text-sm">
+                    <span class="material-symbols-outlined text-base">delete</span>
+                  </button>
+                </div>
+                <div class="text-[11px] text-gray-500 mt-0.5">
+                  Warna: <span class="font-medium text-espresso">${item.color}</span> | Ukuran: <span class="font-medium text-espresso">${item.size}</span>
+                </div>
+                <div class="font-serif text-xs font-semibold text-espresso mt-1">${formatIDR(item.price)}</div>
+              </div>
+              <div class="flex items-center gap-2 border border-border-subtle w-max px-2 py-0.5 bg-white">
+                <button onclick="updateCartQty(${idx}, -1)" class="text-gray-500 hover:text-espresso text-xs font-bold px-1.5">-</button>
+                <span class="text-xs font-medium px-2">${item.qty}</span>
+                <button onclick="updateCartQty(${idx}, 1)" class="text-gray-500 hover:text-espresso text-xs font-bold px-1.5">+</button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Calculations
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      let discount = 0;
+      if (currentVoucher === 'BDSLUX') {
+        discount = subtotal * 0.1; // 10% discount
+      }
+
+      const grandTotal = Math.max(0, subtotal - discount);
+
+      document.getElementById('cart-subtotal').textContent = formatIDR(subtotal);
+      document.getElementById('cart-discount').textContent = `- ${formatIDR(discount)}`;
+      document.getElementById('cart-grand-total').textContent = formatIDR(grandTotal);
+
+      // Free shipping progress tracker (Target: Rp 300.000)
+      const target = 300000;
+      const progress = Math.min(100, (subtotal / target) * 100);
+      document.getElementById('shipping-progress-bar').style.width = `${progress}%`;
+      const trackerStatus = document.getElementById('shipping-tracker-status');
+      if (subtotal >= target) {
+        trackerStatus.textContent = 'Selamat! Anda Dapat Gratis Ongkir';
+        trackerStatus.classList.remove('text-terracotta');
+        trackerStatus.classList.add('text-green-700');
+        document.getElementById('cart-shipping').textContent = 'GRATIS (Promo BDS)';
+      } else {
+        const remaining = target - subtotal;
+        trackerStatus.textContent = `Kurang ${formatIDR(remaining)} lagi`;
+        trackerStatus.classList.add('text-terracotta');
+        trackerStatus.classList.remove('text-green-700');
+        document.getElementById('cart-shipping').textContent = 'Dihitung saat checkout';
+      }
+    }
+
+    // Apply Voucher
+    function applyVoucher() {
+      const code = document.getElementById('voucher-code').value.trim().toUpperCase();
+      const status = document.getElementById('voucher-status');
+      if (code === 'BDSLUX') {
+        currentVoucher = 'BDSLUX';
+        status.textContent = '✓ Voucher BDSLUX Berhasil Digunakan! (Diskon 10% + Gratis Ongkir)';
+        status.classList.remove('hidden', 'text-red-600');
+        status.classList.add('text-green-700');
+      } else {
+        status.textContent = '✕ Kode voucher tidak valid atau sudah kedaluwarsa.';
+        status.classList.remove('hidden', 'text-green-700');
+        status.classList.add('text-red-600');
+      }
+      updateCartUI();
+    }
+
+    // 6. DUAL CHECKOUT FLOWS
+    // Option A: Order via WhatsApp Admin
+    function checkoutViaWhatsApp() {
+      if (cart.length === 0) {
+        alert('Tas belanja Anda masih kosong!');
+        return;
+      }
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      let discount = currentVoucher === 'BDSLUX' ? subtotal * 0.1 : 0;
+      let grandTotal = subtotal - discount;
+
+      let message = `*PESANAN BUTIK BDS (BATAVIA DELIGHT SIGNATURE)*\n`;
+      message += `-----------------------------------------\n`;
+      cart.forEach((item, i) => {
+        message += `${i+1}. *${item.title}*\n`;
+        message += `   • Varian Warna: ${item.color}\n`;
+        message += `   • Ukuran: ${item.size}\n`;
+        message += `   • Qty: ${item.qty} x ${formatIDR(item.price)}\n`;
+        message += `   • Sub: ${formatIDR(item.price * item.qty)}\n\n`;
+      });
+      message += `-----------------------------------------\n`;
+      message += `*Subtotal:* ${formatIDR(subtotal)}\n`;
+      if (discount > 0) message += `*Diskon Promo (BDSLUX):* -${formatIDR(discount)}\n`;
+      message += `*Total Akhir:* ${formatIDR(grandTotal)}\n\n`;
+      message += `*DATA PEMESAN:*\n`;
+      message += `Nama Lengkap: \n`;
+      message += `No. HP / WA: \n`;
+      message += `Alamat Lengkap: \n`;
+      message += `Kecamatan / Kota: \n`;
+      message += `Metode Pembayaran: Transfer BCA / Mandiri / QRIS\n\n`;
+      message += `Mohon dibantu konfirmasi pesanan saya ya Admin BDS. Terima kasih! ✨`;
+
+      const waUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, '_blank');
+    }
+
+    // Option B: Direct Checkout Summary Modal
+    function openDirectCheckoutModal() {
+      if (cart.length === 0) {
+        alert('Tas belanja Anda masih kosong!');
+        return;
+      }
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      let discount = currentVoucher === 'BDSLUX' ? subtotal * 0.1 : 0;
+      document.getElementById('modal-checkout-total').textContent = formatIDR(subtotal - discount);
+
+      document.getElementById('checkout-modal').classList.remove('hidden');
+      document.getElementById('checkout-modal').classList.add('flex');
+    }
+
+    function closeDirectCheckoutModal() {
+      document.getElementById('checkout-modal').classList.add('hidden');
+      document.getElementById('checkout-modal').classList.remove('flex');
+    }
+
+    function submitDirectOrder(e) {
+      e.preventDefault();
+      const name = document.getElementById('cust-name').value;
+      const phone = document.getElementById('cust-phone').value;
+      const address = document.getElementById('cust-address').value;
+      const payment = document.getElementById('cust-payment').value;
+
+      closeDirectCheckoutModal();
+      closeCartDrawer();
+      showToast(`Terima kasih, ${name}! Pesanan Anda berhasil dicatat.`);
+      
+      // Auto follow up via WA
+      setTimeout(() => {
+        alert(`Pesanan ID #BDS-${Date.now().toString().slice(-6)} berhasil dibuat!\n\nNama: ${name}\nMetode: ${payment}\nKami telah menyiapkan konfirmasi pesanan ke WhatsApp Anda.`);
+      }, 500);
+
+      // Clear Cart
+      cart = [];
+      updateCartUI();
+    }
+
+    // 7. DRAWER & MODAL UI CONTROLS
+    function openCartDrawer() {
+      const overlay = document.getElementById('cart-drawer-overlay');
+      const drawer = document.getElementById('cart-drawer');
+      overlay.classList.remove('hidden');
+      setTimeout(() => {
+        drawer.classList.remove('translate-x-full');
+      }, 10);
+    }
+
+    function closeCartDrawer() {
+      const overlay = document.getElementById('cart-drawer-overlay');
+      const drawer = document.getElementById('cart-drawer');
+      drawer.classList.add('translate-x-full');
+      setTimeout(() => {
+        overlay.classList.add('hidden');
+      }, 300);
+    }
+
+    const openCartBtn = document.getElementById('open-cart-btn');
+    if (openCartBtn) openCartBtn.addEventListener('click', openCartDrawer);
+    
+    const closeCartBtn = document.getElementById('close-cart-btn');
+    if (closeCartBtn) closeCartBtn.addEventListener('click', closeCartDrawer);
+    
+    const cartOverlay = document.getElementById('cart-drawer-overlay');
+    if (cartOverlay) cartOverlay.addEventListener('click', (e) => {
+      if (e.target.id === 'cart-drawer-overlay') closeCartDrawer();
+    });
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu) menu.classList.toggle('hidden');
+    }
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+    // Search Modal
+    const searchModal = document.getElementById('search-modal');
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const searchBtn = document.getElementById('search-btn');
+
+    if (searchBtn && searchModal && searchInput) {
+      searchBtn.addEventListener('click', () => {
+        searchModal.classList.remove('hidden');
+        searchModal.classList.add('flex');
+        searchInput.focus();
+      });
+    }
+
+    const closeSearchBtn = document.getElementById('close-search-btn');
+    if (closeSearchBtn && searchModal) {
+      closeSearchBtn.addEventListener('click', () => {
+        searchModal.classList.add('hidden');
+        searchModal.classList.remove('flex');
+      });
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      if (!q) {
+        searchResults.innerHTML = '';
+        return;
+      }
+      const matches = products.filter(p => p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q) || p.categoryLabel.toLowerCase().includes(q));
+      if (matches.length === 0) {
+        searchResults.innerHTML = `<div class="p-4 text-center text-xs text-gray-500">Tidak ada produk yang cocok dengan "${q}".</div>`;
+      } else {
+        searchResults.innerHTML = matches.map(p => `
+          <div onclick="openPdpModal(${p.id}); closeSearchModal();" class="p-3 flex items-center justify-between hover:bg-surface-low cursor-pointer transition-colors">
+            <div class="flex items-center gap-3">
+              <img src="${p.image}" alt="${p.title}" class="w-10 h-12 object-cover border border-border-subtle">
+              <div>
+                <h5 class="font-serif text-sm text-espresso font-semibold">${p.title}</h5>
+                <span class="text-[10px] text-gray-500 uppercase">${p.categoryLabel}</span>
+              </div>
+            </div>
+            <span class="font-serif text-xs font-bold text-espresso">${formatIDR(p.price)}</span>
+          </div>
+        `).join('');
+      }
+    });
+
+    function quickSearch(keyword) {
+      searchInput.value = keyword;
+      searchInput.dispatchEvent(new Event('input'));
+    }
+
+    function closeSearchModal() {
+      searchModal.classList.add('hidden');
+      searchModal.classList.remove('flex');
+    }
+
+    // Spotlight Image Switcher
+    function changeSpotlightImage(src) {
+      document.getElementById('spotlight-main-img').src = src;
+    }
+
+    // Hotspot Click
+    function openHotspot(id) {
+      const tooltip = document.getElementById(id);
+      if (tooltip) {
+        tooltip.classList.toggle('hidden');
+      }
+    }
+
+    // FAQ Accordion Toggle
+    function toggleFaq(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isOpen = !content.classList.contains('hidden');
+      
+      // Close all others
+      document.querySelectorAll('#faq-accordion > div > div').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('#faq-accordion button .material-symbols-outlined').forEach(i => i.textContent = 'add');
+
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        icon.textContent = 'remove';
+      }
+    }
+
+    // Toast Notification
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3500);
+    }
+
+    // Newsletter Subscription
+    function subscribeNewsletter(e) {
+      e.preventDefault();
+      showToast('Terima kasih! Anda telah terdaftar di BDS Atelier Journal.');
+      e.target.reset();
+    }
+
+    // Initial Load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderProducts();
+      updateCartUI();
+    });
+  </script>
+</body>
+</html>
+
